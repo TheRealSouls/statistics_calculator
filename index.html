@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>Statistics Calculator</h1>
+            <h3 class="description">Calculate mean, median, mode, range, variance, and standard deviation!</p>
+        </header>
+    </div>
+
+    <form id="stats-form">
+        <div class="input-group">
+            <label for="numbers">Enter numerical data</label>
+            <input type="text" id="numbers" placeholder="Example: 1, 2, 3, 4, 5" required>
+            <p class="instruction">Format: Enter numbers separated by commas, spaces, or new lines</p>
+        </div>
+        <div id="sample-buttons">
+            <button type="button" id="small-sample" onclick=generateSmallSample()>Small Sample</button>
+            <button type="button" id="medium-sample" onclick=generateMediumSample()>Medium Sample</button>
+            <button type="button" id="large-sample" onclick=generateLargeSample()>Large Sample</button>
+        </div>
+        <div id="main-buttons">
+            <button type="submit" id="calculate">Calculate</button>
+            <button type="reset" id="clear">Clear</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <div id="results">
+        <div class="box">
+            <h2>Mean</h2>
+            <p id="mean"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Median</h2>
+            <p id="median"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Mode</h2>
+            <p id="mode"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Range</h2>
+            <p id="range"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Variance</h2>
+            <p id="variance"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Standard Deviation</h2>
+            <p id="stddev"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Minimum</h2>
+            <p id="min"></p>
+        </div>
+        <div class="box"></div>
+            <h2>Maximum</h2>
+            <p id="max"></p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Developed with ❤️ by <a href="https://github.com/TheRealSouls">TheRealSouls</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
