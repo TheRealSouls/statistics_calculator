@@ -156,6 +156,7 @@ textarea:focus {
 
 #calculate {
     background-color: var(--primary);
+    color: var(--light);
 }
 
 #calculate:hover {
