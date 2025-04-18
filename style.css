@@ -7,7 +7,17 @@
     --sucess: #48cfad;
     --warning: #ffce54;
     --danger: #ed5565;
+    --mean: #4FC1E9;
+    --median: #48CFAD;
+    --mode: #AC92EC;
+    --range: #FFCE54;
+    --variance: #ED5565;
+    --stddev: #5D9CEC;
+    --minimum: #FC6E51;
+    --maximum: #A0D468;
 }
+
+/* Global styles */
 
 * {
     box-sizing: border-box;
@@ -25,3 +35,153 @@ body {
     flex-direction: column;
 }
 
+/* Header starts here */
+
+header {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: var(--light);
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+h3 {
+    opacity: 0.8;
+}
+
+/* Main starts here */
+
+main {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+form {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    border-radius: 0.5rem;
+    resize: vertical;
+    border: 2px solid #e0e0e0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--dark);
+    background-color: var(--light);
+    transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.instruction {
+    opacity: 0.85;
+    margin: 0.5rem 0;
+}
+
+/* Buttons start here */
+
+#sample-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#sample-buttons * {
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+#sample-buttons *:hover {
+    background-color: var(--secondary);
+    cursor: pointer;
+}
+
+#main-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+#main-buttons * {
+    flex: 1;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+#main-buttons *:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#calculate {
+    background-color: var(--primary);
+}
+
+#calculate:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Results start here */
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.box {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    border-left: 4px solid var(--primary);
+}
