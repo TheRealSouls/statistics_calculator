@@ -7,10 +7,13 @@ const meanResult = document.getElementById("mean");
 const medianResult = document.getElementById("median");
 const modeResult = document.getElementById("mode");
 const rangeResult = document.getElementById("range");
-const stdDevResult = document.getElementById("std-dev");
+const interquartileResult = document.getElementById("interquartile");
 const varianceResult = document.getElementById("variance");
+const stdDevResult = document.getElementById("stddev");
 const minResult = document.getElementById("min");
 const maxResult = document.getElementById("max");
+
+const errorMsg = document.querySelector(".error-message");
 
 const generateSmallSample = () => {
     if (input.value) {
@@ -45,17 +48,24 @@ const generateLargeSample = () => {
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
+    const regex = /^[0-9]+(?:[,\s][0-9]+)*$/;
+    // Implement shake animation
+
+    if (!regex.test(input.value)) {
+        errorMsg.style.display = 'block';
+    }
+
     const inputArr = input.value.split(",").map(Number);
 
     meanResult.innerText = mean(inputArr);
     medianResult.innerText = median(inputArr);
     modeResult.innerText = mode(inputArr);
     rangeResult.innerText = range(inputArr);
-    stdDevResult.innerText = stdDev(inputArr);
+    interquartileResult.innerText = interquartile(inputArr);
     varianceResult.innerText = variance(inputArr);
+    stdDevResult.innerText = stdDev(inputArr);
     minResult.innerText = Math.min(...inputArr);
     maxResult.innerText = Math.max(...inputArr);
-    input.value = "";
 })
 
 const mean = arr => String((arr.reduce((acc,val) => {
@@ -96,3 +106,31 @@ const range = arr => {
 
     return sorted[sorted.length - 1] - sorted[0];
 }
+
+const interquartile = arr => {
+    const sorted = [...arr].sort((a,b) => a - b);
+
+    const firstQuartile = sorted[Math.floor(sorted.length / 4)];
+    const thirdQuartile = sorted[Math.floor(3 * sorted.length / 4)];
+
+    return thirdQuartile - firstQuartile;
+}
+
+const variance = arr => {
+    const meanOfArr = mean(arr);
+    let squaredAverage = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        squaredAverage += (arr[i] - meanOfArr) ** 2;
+    }
+
+    return (squaredAverage /= arr.length).toFixed(2);
+}
+
+
+const stdDev = arr => {
+    return Math.sqrt(variance(arr)).toFixed(2);
+};
+
+
+

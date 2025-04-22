@@ -20,7 +20,7 @@
             <span class="math-icon" style="top: 15%; left: 90%;">±</span>
         <header>
             <h1>Statistics Calculator</h1>
-            <h3 class="description">Calculate mean, median, mode, range, variance, standard deviation, minimum and maximum!</p>
+            <h3 class="description">Calculate mean, median, mode, range, interquartile range, variance, standard deviation, minimum and maximum!</p>
         </header>
     </div>
     <main>
@@ -30,6 +30,7 @@
                 <label for="numbers">Enter numerical data:</label>
                 <textarea type="text" id="numbers" placeholder="Example: 1, 2, 3, 4, 5" required></textarea>
                 <p class="instruction">Format: Enter numbers separated by commas, spaces, or new lines</p>
+                <p class="error-message">Please enter numbers in the format specified.</p>
             </div>
             <div id="sample-buttons">
                 <button type="button" id="small-sample" onclick=generateSmallSample()>Small Sample</button>
@@ -78,7 +79,7 @@
                     Interquartile Range
                     <span class="info-icon" data-tooltip="The range between the 1st quarter item and the 3rd quarter item.">?</span>
                 </h2>
-                <p id="max">—</p>
+                <p id="interquartile">—</p>
             </div>
             <div class="box" style="border-left: 4px solid var(--variance);">
                 <h2>

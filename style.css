@@ -131,9 +131,15 @@ textarea:focus {
     border-color: var(--accent);
 }
 
-.instruction {
+.instruction, .error-message {
     opacity: 0.85;
     margin: 0.5rem 0;
+}
+
+.error-message {
+    color: var(--danger);
+    display: none;
+    transition: all 0.3s ease;
 }
 
 /* Buttons start here */
