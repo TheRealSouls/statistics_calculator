@@ -14,3 +14,5 @@ It calculates the following:
 - Variance
 - Minimum
 - Maximum
+
+![GIF of website](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHU0bHZhdjBiaTl2cTV6b3V5anJwNjBrdmI2dGI3ZWthczkwejdybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6bNzhaCZ9bgRCMM2sD/giphy.gif)
