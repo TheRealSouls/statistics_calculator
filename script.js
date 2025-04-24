@@ -15,6 +15,8 @@ const maxResult = document.getElementById("max");
 
 const errorMsg = document.querySelector(".error-message");
 
+const form = document.getElementById("stats-form");
+
 const generateSmallSample = () => {
     if (input.value) {
         input.value = "";    
@@ -48,11 +50,19 @@ const generateLargeSample = () => {
 document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const regex = /^[0-9]+(?:[,\s][0-9]+)*$/;
+    if (form.classList.contains('shake')) {
+        form.classList.remove('shake');
+    }
+
+    const regex = /^[0-9]+(?:[,\s]+[0-9]+)*$/;
     // Implement shake animation
 
     if (!regex.test(input.value)) {
         errorMsg.style.display = 'block';
+        form.classList.add('shake');
+        return;
+    } else {
+        errorMsg.style.display = 'none';
     }
 
     const inputArr = input.value.split(",").map(Number);
