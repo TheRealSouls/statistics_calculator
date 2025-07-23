@@ -1,18 +1,32 @@
-# Simple Statistics Calculator
+![Alt text](https://i.ibb.co/ymF46CCx/Screenshot-2025-07-23-075933.png)
 
-I built this as a simple project reflecting my love for maths :) I'd love to do something regarding maths in the future, and I figured this might be helpful for my statistics questions and for other people as well. This project took me around 5 days to make and reflects a lot of my competencies in web development.
+<h1><a href="https://statistics-calculator.surge.sh/" style="font-size: 5rem;">view live</a></h1>
 
-Any suggestions are appreciated!
+# 📊 statistics calculator
 
-It calculates the following:
-- Mean
-- Median
-- Mode
-- Range
-- Interquartile Range
-- Standard Deviation
-- Variance
-- Minimum
-- Maximum
+> _"There are three kinds of lies: lies, damned lies, and statistics."_
 
-![GIF of website](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHU0bHZhdjBiaTl2cTV6b3V5anJwNjBrdmI2dGI3ZWthczkwejdybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6bNzhaCZ9bgRCMM2sD/giphy.gif)
+this is one of my favourite websites in terms of design. it has animations, an aesthetically pleasing colour scheme and responsive design. i also designed it as a testimony to my love for maths and numbers over the years.
+
+it calculates the following (through JavaScript array methods):
+- mean
+- median
+- mode
+- range
+- interquartile range
+- variance
+- standard deviation
+- minimum
+- maximum
+
+## key technologies used:
+<br>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a>
+
+## 🤝 connect
+
+- [LinkedIn](https://linkedin.com/in/...)  
+- [GitHub](https://github.com/matasroda) 
+
